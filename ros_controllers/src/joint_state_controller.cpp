@@ -58,7 +58,7 @@ JointStateController::on_configure(const rclcpp_lifecycle::State & previous_stat
   }
 
   joint_state_publisher_ =
-    lifecycle_node_->create_publisher<sensor_msgs::msg::JointState>("joint_states");
+    lifecycle_node_->create_publisher<sensor_msgs::msg::JointState>("/joint_states");
   joint_state_publisher_->on_activate();
 
   return rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn::SUCCESS;
