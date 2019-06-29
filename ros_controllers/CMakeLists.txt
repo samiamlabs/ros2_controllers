@@ -25,6 +25,7 @@ add_library(
   SHARED
   # src/joint_trajectory_controller.cpp NOTE(sam): add back when API is reasonably stable
   src/joint_position_controller.cpp
+  src/joint_effort_controller.cpp
   src/joint_state_controller.cpp
   # src/trajectory.cpp
 )
@@ -47,6 +48,7 @@ controller_manager_register_controller(
   default_controllers
   "ros_controllers::JointStateController"
   "ros_controllers::JointPositionController"
+  "ros_controllers::JointEffortController"
   "ros_controllers::JointTrajectoryController"
 )
 # Causes the visibility macros to use dllexport rather than dllimport,
